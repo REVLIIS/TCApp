@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelWrapper = new System.Windows.Forms.Panel();
+            this.menu_LabelTimes = new System.Windows.Forms.Label();
             this.labelRecents = new System.Windows.Forms.Label();
             this.panelMenuItem = new System.Windows.Forms.Panel();
             this.panelMenuTimes = new System.Windows.Forms.Panel();
             this.panelMenuRecents = new System.Windows.Forms.Panel();
-            this.menu_LabelTimes = new System.Windows.Forms.Label();
+            this.menu_Tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.panelWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,16 @@
             this.panelWrapper.Name = "panelWrapper";
             this.panelWrapper.Size = new System.Drawing.Size(850, 400);
             this.panelWrapper.TabIndex = 18;
+            // 
+            // menu_LabelTimes
+            // 
+            this.menu_LabelTimes.AutoSize = true;
+            this.menu_LabelTimes.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Bold);
+            this.menu_LabelTimes.Location = new System.Drawing.Point(11, 193);
+            this.menu_LabelTimes.Name = "menu_LabelTimes";
+            this.menu_LabelTimes.Size = new System.Drawing.Size(84, 33);
+            this.menu_LabelTimes.TabIndex = 17;
+            this.menu_LabelTimes.Text = "Times";
             // 
             // labelRecents
             // 
@@ -87,16 +98,6 @@
             this.panelMenuRecents.Size = new System.Drawing.Size(140, 301);
             this.panelMenuRecents.TabIndex = 15;
             // 
-            // menu_LabelTimes
-            // 
-            this.menu_LabelTimes.AutoSize = true;
-            this.menu_LabelTimes.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Bold);
-            this.menu_LabelTimes.Location = new System.Drawing.Point(11, 193);
-            this.menu_LabelTimes.Name = "menu_LabelTimes";
-            this.menu_LabelTimes.Size = new System.Drawing.Size(84, 33);
-            this.menu_LabelTimes.TabIndex = 17;
-            this.menu_LabelTimes.Text = "Times";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,5 +120,6 @@
         private System.Windows.Forms.Panel panelMenuTimes;
         private System.Windows.Forms.Panel panelMenuRecents;
         private System.Windows.Forms.Label menu_LabelTimes;
+        private System.Windows.Forms.ToolTip menu_Tooltip;
     }
 }

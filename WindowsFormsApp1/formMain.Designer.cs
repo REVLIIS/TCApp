@@ -32,8 +32,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pageWrapper = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label_main = new System.Windows.Forms.Label();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.Divider = new System.Windows.Forms.Label();
             this.logoPlaceholder = new System.Windows.Forms.Label();
             this.sideBtn_Dev = new FontAwesome.Sharp.IconButton();
             this.sideBtn_Menu = new FontAwesome.Sharp.IconButton();
@@ -42,10 +44,10 @@
             this.sideBtn_Settings = new FontAwesome.Sharp.IconButton();
             this.dateLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.Divider = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pageWrapper.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -65,6 +67,17 @@
             this.pageWrapper.Name = "pageWrapper";
             this.pageWrapper.Size = new System.Drawing.Size(984, 532);
             this.pageWrapper.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Lavender;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(-5, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(990, 4);
+            this.label1.TabIndex = 27;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_main
             // 
@@ -94,6 +107,17 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(200, 561);
             this.panelSideMenu.TabIndex = 24;
+            // 
+            // Divider
+            // 
+            this.Divider.BackColor = System.Drawing.Color.Lavender;
+            this.Divider.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Divider.Location = new System.Drawing.Point(196, -1);
+            this.Divider.Margin = new System.Windows.Forms.Padding(0);
+            this.Divider.Name = "Divider";
+            this.Divider.Size = new System.Drawing.Size(4, 600);
+            this.Divider.TabIndex = 26;
+            this.Divider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoPlaceholder
             // 
@@ -222,27 +246,10 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // Divider
+            // fileSystemWatcher1
             // 
-            this.Divider.BackColor = System.Drawing.Color.Lavender;
-            this.Divider.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Divider.Location = new System.Drawing.Point(196, -1);
-            this.Divider.Margin = new System.Windows.Forms.Padding(0);
-            this.Divider.Name = "Divider";
-            this.Divider.Size = new System.Drawing.Size(4, 600);
-            this.Divider.TabIndex = 26;
-            this.Divider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Lavender;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(-5, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(990, 4);
-            this.label1.TabIndex = 27;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // CHALLENGE_APP
             // 
@@ -259,6 +266,7 @@
             this.pageWrapper.PerformLayout();
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +289,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Divider;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 

@@ -73,6 +73,8 @@ namespace WindowsFormsApp1
                 button.Name = dr["count_down"].ToString() + "," + dr["id"].ToString();
                 button.MouseClick += new MouseEventHandler(dynamicButton_Click);
 
+                ToolTip toolTip1 = new ToolTip();
+                menu_Tooltip.SetToolTip(button, "Zet de UV lamp aan voor "+dr["count_down"].ToString() + " seconden.");
             }
         }
 
@@ -104,6 +106,9 @@ namespace WindowsFormsApp1
 
                 button.Name = menu_item[0]["count_down"].ToString() + "," + menu_item[0]["id"].ToString();
                 button.MouseClick += new MouseEventHandler(dynamicButton_Click);
+
+                ToolTip toolTip1 = new ToolTip();
+                menu_Tooltip.SetToolTip(button, "Zet de UV lamp aan voor " + menu_item[0]["count_down"].ToString() + " seconden.");
             }
         }
 
