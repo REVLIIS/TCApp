@@ -58,6 +58,9 @@ namespace WindowsFormsApp1
 
             statisticsGrid.Columns["time_of_use"].HeaderText = "Tijd";
             statisticsGrid.Columns["name"].HeaderText = "Naam";
+
+            statisticsGrid.RowHeadersVisible = false;
+
         }
     }
 }

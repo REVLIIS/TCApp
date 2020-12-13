@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelWrapper = new System.Windows.Forms.Panel();
-            this.statisticsCalendar = new System.Windows.Forms.MonthCalendar();
-            this.statisticsDateLabel = new System.Windows.Forms.Label();
-            this.statisticsGrid = new System.Windows.Forms.DataGridView();
             this.statsNoResultLabel = new System.Windows.Forms.Label();
+            this.statisticsGrid = new System.Windows.Forms.DataGridView();
+            this.statisticsDateLabel = new System.Windows.Forms.Label();
+            this.statisticsCalendar = new System.Windows.Forms.MonthCalendar();
             this.panelWrapper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statisticsGrid)).BeginInit();
             this.SuspendLayout();
@@ -50,13 +50,29 @@
             this.panelWrapper.Size = new System.Drawing.Size(850, 400);
             this.panelWrapper.TabIndex = 21;
             // 
-            // statisticsCalendar
+            // statsNoResultLabel
             // 
-            this.statisticsCalendar.Location = new System.Drawing.Point(573, 91);
-            this.statisticsCalendar.MaxSelectionCount = 1;
-            this.statisticsCalendar.Name = "statisticsCalendar";
-            this.statisticsCalendar.TabIndex = 1;
-            this.statisticsCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.StatisticsCalendar_DateChanged);
+            this.statsNoResultLabel.AutoSize = true;
+            this.statsNoResultLabel.Location = new System.Drawing.Point(90, 103);
+            this.statsNoResultLabel.Name = "statsNoResultLabel";
+            this.statsNoResultLabel.Size = new System.Drawing.Size(133, 13);
+            this.statsNoResultLabel.TabIndex = 5;
+            this.statsNoResultLabel.Text = "Geen resultaten gevonden";
+            this.statsNoResultLabel.Visible = false;
+            // 
+            // statisticsGrid
+            // 
+            this.statisticsGrid.AllowUserToAddRows = false;
+            this.statisticsGrid.AllowUserToDeleteRows = false;
+            this.statisticsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.statisticsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.statisticsGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.statisticsGrid.Location = new System.Drawing.Point(79, 91);
+            this.statisticsGrid.Name = "statisticsGrid";
+            this.statisticsGrid.ReadOnly = true;
+            this.statisticsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.statisticsGrid.Size = new System.Drawing.Size(326, 162);
+            this.statisticsGrid.TabIndex = 4;
             // 
             // statisticsDateLabel
             // 
@@ -68,26 +84,13 @@
             this.statisticsDateLabel.TabIndex = 3;
             this.statisticsDateLabel.Text = "date";
             // 
-            // statisticsGrid
+            // statisticsCalendar
             // 
-            this.statisticsGrid.AllowUserToAddRows = false;
-            this.statisticsGrid.AllowUserToDeleteRows = false;
-            this.statisticsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.statisticsGrid.Location = new System.Drawing.Point(79, 91);
-            this.statisticsGrid.Name = "statisticsGrid";
-            this.statisticsGrid.ReadOnly = true;
-            this.statisticsGrid.Size = new System.Drawing.Size(326, 162);
-            this.statisticsGrid.TabIndex = 4;
-            // 
-            // statsNoResultLabel
-            // 
-            this.statsNoResultLabel.AutoSize = true;
-            this.statsNoResultLabel.Location = new System.Drawing.Point(90, 103);
-            this.statsNoResultLabel.Name = "statsNoResultLabel";
-            this.statsNoResultLabel.Size = new System.Drawing.Size(133, 13);
-            this.statsNoResultLabel.TabIndex = 5;
-            this.statsNoResultLabel.Text = "Geen resultaten gevonden";
-            this.statsNoResultLabel.Visible = false;
+            this.statisticsCalendar.Location = new System.Drawing.Point(573, 91);
+            this.statisticsCalendar.MaxSelectionCount = 1;
+            this.statisticsCalendar.Name = "statisticsCalendar";
+            this.statisticsCalendar.TabIndex = 1;
+            this.statisticsCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.StatisticsCalendar_DateChanged);
             // 
             // FormStatistics
             // 
