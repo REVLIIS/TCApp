@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
                     printOutput(dt);
                 }
                 else
-                    devMsgBox("Query executed");
+                    devPrint("no rows for query: '"+query+"' executed.");
                     
             }
 
