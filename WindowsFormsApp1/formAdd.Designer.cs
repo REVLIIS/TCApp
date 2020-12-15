@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelPreset = new System.Windows.Forms.Label();
             this.panel_add_preset_dev = new System.Windows.Forms.Panel();
             this.addPreset_submit = new System.Windows.Forms.Button();
             this.addPreset_nameInput = new System.Windows.Forms.TextBox();
@@ -42,15 +41,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.addPreset_countDown)).BeginInit();
             this.panelWrapper.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelPreset
-            // 
-            this.labelPreset.AutoSize = true;
-            this.labelPreset.Location = new System.Drawing.Point(22, 30);
-            this.labelPreset.Name = "labelPreset";
-            this.labelPreset.Size = new System.Drawing.Size(83, 13);
-            this.labelPreset.TabIndex = 0;
-            this.labelPreset.Text = "ADD PRESETS";
             // 
             // panel_add_preset_dev
             // 
@@ -101,6 +91,7 @@
             // 
             // addPreset_MenuDropdown
             // 
+            this.addPreset_MenuDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.addPreset_MenuDropdown.FormattingEnabled = true;
             this.addPreset_MenuDropdown.Location = new System.Drawing.Point(86, 96);
             this.addPreset_MenuDropdown.Name = "addPreset_MenuDropdown";
@@ -129,7 +120,6 @@
             // 
             this.panelWrapper.BackColor = System.Drawing.SystemColors.Control;
             this.panelWrapper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelWrapper.Controls.Add(this.labelPreset);
             this.panelWrapper.Controls.Add(this.panel_add_preset_dev);
             this.panelWrapper.Location = new System.Drawing.Point(0, 0);
             this.panelWrapper.Name = "panelWrapper";
@@ -148,13 +138,11 @@
             this.panel_add_preset_dev.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addPreset_countDown)).EndInit();
             this.panelWrapper.ResumeLayout(false);
-            this.panelWrapper.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label labelPreset;
         private System.Windows.Forms.Panel panel_add_preset_dev;
         private System.Windows.Forms.Button addPreset_submit;
         private System.Windows.Forms.TextBox addPreset_nameInput;

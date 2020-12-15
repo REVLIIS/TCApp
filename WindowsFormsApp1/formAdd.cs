@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             FormMain = form;
+            FormMain.themeHandler(this.Controls);
 
             //add preset dropdown
             addPreset_MenuDropdown.DataSource = FormMain.execQuery("select * from menu");

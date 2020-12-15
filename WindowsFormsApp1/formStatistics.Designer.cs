@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelWrapper = new System.Windows.Forms.Panel();
             this.statsNoResultLabel = new System.Windows.Forms.Label();
             this.statisticsGrid = new System.Windows.Forms.DataGridView();
@@ -64,6 +65,8 @@
             // 
             this.statisticsGrid.AllowUserToAddRows = false;
             this.statisticsGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.statisticsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.statisticsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.statisticsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.statisticsGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -73,6 +76,7 @@
             this.statisticsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.statisticsGrid.Size = new System.Drawing.Size(326, 162);
             this.statisticsGrid.TabIndex = 4;
+            this.statisticsGrid.SelectionChanged += new System.EventHandler(this.StatisticsGrid_SelectionChanged);
             // 
             // statisticsDateLabel
             // 
@@ -86,10 +90,15 @@
             // 
             // statisticsCalendar
             // 
+            this.statisticsCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.statisticsCalendar.ForeColor = System.Drawing.Color.Red;
             this.statisticsCalendar.Location = new System.Drawing.Point(573, 91);
             this.statisticsCalendar.MaxSelectionCount = 1;
             this.statisticsCalendar.Name = "statisticsCalendar";
             this.statisticsCalendar.TabIndex = 1;
+            this.statisticsCalendar.TitleBackColor = System.Drawing.Color.Red;
+            this.statisticsCalendar.TitleForeColor = System.Drawing.Color.Red;
+            this.statisticsCalendar.TrailingForeColor = System.Drawing.Color.Red;
             this.statisticsCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.StatisticsCalendar_DateChanged);
             // 
             // FormStatistics

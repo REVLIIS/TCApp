@@ -37,6 +37,7 @@
             this.panelMenuTimes = new System.Windows.Forms.Panel();
             this.panelMenuRecents = new System.Windows.Forms.Panel();
             this.menu_Tooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.menu_LabelItems = new System.Windows.Forms.Label();
             this.panelWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             // 
             this.panelWrapper.BackColor = System.Drawing.SystemColors.Control;
             this.panelWrapper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelWrapper.Controls.Add(this.menu_LabelItems);
             this.panelWrapper.Controls.Add(this.menu_LabelTimes);
             this.panelWrapper.Controls.Add(this.labelRecents);
             this.panelWrapper.Controls.Add(this.panelMenuItem);
@@ -58,11 +60,11 @@
             // 
             this.menu_LabelTimes.AutoSize = true;
             this.menu_LabelTimes.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Bold);
-            this.menu_LabelTimes.Location = new System.Drawing.Point(11, 193);
+            this.menu_LabelTimes.Location = new System.Drawing.Point(11, 217);
             this.menu_LabelTimes.Name = "menu_LabelTimes";
-            this.menu_LabelTimes.Size = new System.Drawing.Size(84, 33);
+            this.menu_LabelTimes.Size = new System.Drawing.Size(89, 33);
             this.menu_LabelTimes.TabIndex = 17;
-            this.menu_LabelTimes.Text = "Times";
+            this.menu_LabelTimes.Text = "TIMES";
             // 
             // labelRecents
             // 
@@ -77,17 +79,17 @@
             // panelMenuItem
             // 
             this.panelMenuItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenuItem.Location = new System.Drawing.Point(13, 34);
+            this.panelMenuItem.Location = new System.Drawing.Point(13, 58);
             this.panelMenuItem.Name = "panelMenuItem";
-            this.panelMenuItem.Size = new System.Drawing.Size(629, 150);
+            this.panelMenuItem.Size = new System.Drawing.Size(630, 125);
             this.panelMenuItem.TabIndex = 13;
             // 
             // panelMenuTimes
             // 
             this.panelMenuTimes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenuTimes.Location = new System.Drawing.Point(13, 229);
+            this.panelMenuTimes.Location = new System.Drawing.Point(13, 253);
             this.panelMenuTimes.Name = "panelMenuTimes";
-            this.panelMenuTimes.Size = new System.Drawing.Size(629, 150);
+            this.panelMenuTimes.Size = new System.Drawing.Size(630, 125);
             this.panelMenuTimes.TabIndex = 14;
             // 
             // panelMenuRecents
@@ -97,6 +99,16 @@
             this.panelMenuRecents.Name = "panelMenuRecents";
             this.panelMenuRecents.Size = new System.Drawing.Size(140, 301);
             this.panelMenuRecents.TabIndex = 15;
+            // 
+            // menu_LabelItems
+            // 
+            this.menu_LabelItems.AutoSize = true;
+            this.menu_LabelItems.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Bold);
+            this.menu_LabelItems.Location = new System.Drawing.Point(11, 24);
+            this.menu_LabelItems.Name = "menu_LabelItems";
+            this.menu_LabelItems.Size = new System.Drawing.Size(89, 33);
+            this.menu_LabelItems.TabIndex = 18;
+            this.menu_LabelItems.Text = "ITEMS";
             // 
             // FormMenu
             // 
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Panel panelMenuRecents;
         private System.Windows.Forms.Label menu_LabelTimes;
         private System.Windows.Forms.ToolTip menu_Tooltip;
+        private System.Windows.Forms.Label menu_LabelItems;
     }
 }

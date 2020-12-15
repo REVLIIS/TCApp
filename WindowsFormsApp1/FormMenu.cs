@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
             createButtons();
             fillRecentPanel();
 
+            FormMain.themeHandler(this.Controls);
+
             //panels moeten scrollbaar zijn
         }
 

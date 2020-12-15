@@ -72,7 +72,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(-5, 0);
+            this.label1.Location = new System.Drawing.Point(-5, -1);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(990, 4);
@@ -105,7 +105,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(200, 561);
+            this.panelSideMenu.Size = new System.Drawing.Size(200, 434);
             this.panelSideMenu.TabIndex = 24;
             // 
             // Divider
@@ -234,7 +234,7 @@
             this.dateLabel.AutoSize = true;
             this.dateLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.dateLabel.Font = new System.Drawing.Font("Vogue ExtraBold", 18F, System.Drawing.FontStyle.Bold);
-            this.dateLabel.Location = new System.Drawing.Point(1114, 0);
+            this.dateLabel.Location = new System.Drawing.Point(983, 0);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(70, 29);
             this.dateLabel.TabIndex = 25;
@@ -255,8 +255,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(145)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(1053, 434);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.pageWrapper);

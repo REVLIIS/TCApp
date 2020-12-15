@@ -20,12 +20,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             FormMain = form;
+            FormMain.themeHandler(this.Controls);
+
+            statisticsGrid.BackgroundColor = FormMain.darkmode ? Color.FromArgb(71, 71, 71) : Color.FromArgb(230, 230, 250);
+            statisticsGrid.EnableHeadersVisualStyles = false;
+            statisticsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             populateStatsPanel( DateTime.Now.Date.ToShortDateString());
 
             statisticsDateLabel.Text = DateTime.Now.ToString("d MMMM, yyyy");
 
             statisticsCalendar.MaxDate = DateTime.Now; //no statistics for future days
+
+            
         }
 
         private void StatisticsCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -62,5 +69,11 @@ namespace WindowsFormsApp1
             statisticsGrid.RowHeadersVisible = false;
 
         }
+
+        private void StatisticsGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            statisticsGrid.ClearSelection(); //removes blue selection
+        }
+
     }
 }

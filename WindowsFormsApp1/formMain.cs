@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
         Boolean devmode = true;
         private IconButton currentBtn;
         private Form currentForm;
+        public bool darkmode = false;
 
         public CHALLENGE_APP()
         {
@@ -177,6 +178,26 @@ namespace WindowsFormsApp1
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
+
+        public struct darkColors
+        {
+            public static Color buttonSide = Color.FromArgb(71, 71, 71);
+            public static Color backGround = Color.FromArgb(71, 71, 71);
+            public static Color buttonInside = Color.FromArgb(193, 193, 193);
+            public static Color text = Color.FromArgb(255, 255, 255);
+            public static Color element = Color.FromArgb(222, 220, 220);
+        }
+
+        public struct lightColors
+        {
+            public static Color buttonSide = Color.FromArgb(230, 230, 230);
+            public static Color backGround = Color.FromArgb(230, 230, 250);
+            public static Color buttonInside = Color.FromArgb(50, 119, 179); //150, 150, 150
+            public static Color text = Color.FromArgb(0, 0, 0);
+            public static Color element = Color.FromArgb(40, 40, 40);
+        }
+
+
         private void openChildForm(Form childForm)
         {
             devPrint("opening new form start");
@@ -188,7 +209,8 @@ namespace WindowsFormsApp1
 
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            //childForm.Dock = DockStyle.Fill;
+            childForm.Top = 2;
             //childForm.BackColor = Color.Transparent; werkt niet
 
             pageWrapper.Controls.Add(childForm);
@@ -211,5 +233,83 @@ namespace WindowsFormsApp1
             currentForm.Close();
             resetButton();
         }
+
+        public void getColors()
+        {
+
+        }
+
+        public void themeHandler(Control.ControlCollection container)
+        {
+            foreach (Control component in container)
+            {
+                if(component.HasChildren)
+                    themeHandler(component.Controls);
+
+                Console.WriteLine("yoo");
+
+                if (component is Panel)
+                {
+                    devPrint("panel");
+
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                }
+                else if (component is Button)
+                {
+                    component.BackColor = darkmode ? (component.Name.StartsWith("sideBtn")) ? darkColors.buttonSide : darkColors.buttonInside : 
+                                                     (component.Name.StartsWith("sideBtn")) ? lightColors.buttonSide : lightColors.buttonInside;
+
+                    component.ForeColor =/* darkmode ? darkColors.text :*/ lightColors.text;
+
+                }
+                else if (component is TextBox)
+                {
+                    devPrint("txt");
+
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                }
+                else if (component is Label)
+                {
+                    devPrint("lbl");
+
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if(component is CheckBox)
+                {
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if (component is MonthCalendar)
+                {
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if(component is ComboBox)
+                {
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if(component is TextBox)
+                {
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if(component is NumericUpDown)
+                {
+                    component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else if (component is DataGridView)
+                {
+                    //component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
+                    //component.ForeColor = darkmode ? darkColors.text : lightColors.text;
+                }
+                else
+                    devPrint("elem not found "+component.GetType());
+
+            }
+        }
+        
     }
 }
