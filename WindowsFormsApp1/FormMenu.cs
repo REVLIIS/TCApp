@@ -101,7 +101,9 @@ namespace WindowsFormsApp1
 
 
                 button.Text = date.Date.ToString("dd/MM/yyyy") + "\n" + dr["time_of_use"].ToString() + "\n" + menu_item[0]["name"];
-                button.Font = new Font("Vogue", 10, FontStyle.Bold);
+                button.Font = new Font("Vogue", 9, FontStyle.Bold);
+                button.FlatStyle = FlatStyle.Flat;
+
 
                 panelMenuRecents.Controls.Add(button);
 

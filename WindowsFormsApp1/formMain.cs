@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         private Form currentForm;
         public bool darkmode = false;
 
+        
         public CHALLENGE_APP()
         {
             InitializeComponent();
@@ -27,6 +28,11 @@ namespace WindowsFormsApp1
 
             if(!devmode)
                 sideBtn_Dev.Hide();
+
+            themeHandler(this.Controls);
+
+            //this.BackColor = lightColors.backGround;
+
         }
 
         private async void startTimer()
@@ -119,15 +125,12 @@ namespace WindowsFormsApp1
         #endregion
 
         #region side button markup
-        private void ActivateButton(object senderBtn, Color color)
+        private void ActivateButton(object senderBtn)
         {
             resetButton();
 
             currentBtn = (IconButton)senderBtn;
-
-            currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-            currentBtn.ForeColor = color;
-            currentBtn.IconColor = color;
+            currentBtn.BackColor = darkmode ? Color.FromArgb(37, 36, 81) : Color.FromArgb(138, 164, 226);
         }
 
         private void resetButton()
@@ -135,35 +138,34 @@ namespace WindowsFormsApp1
             if (currentBtn == null)
                 return;
 
-            currentBtn.BackColor = Color.FromArgb(35, 38, 45); //sidebar bg color
-            currentBtn.ForeColor = Color.Lavender; //text color
-            currentBtn.IconColor = Color.Lavender; //icon color
+            currentBtn.BackColor = darkmode ? darkColors.buttonSide : lightColors.buttonSide;
+                                                   //currentBtn.BackColor = Color.FromArgb(35, 38, 45); //sidebar bg color
         }
         #endregion
 
         #region side button clicks
         private void sideBtn_Menu_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender);
             openChildForm(new FormMenu(this));
         }
 
 
         private void sideBtn_Add_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender);
             openChildForm(new FormAdd(this));
         }
 
         private void sideBtn_Stats_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender);
             openChildForm(new FormStatistics(this));
         }
 
         private void sideBtn_Settings_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender);
             openChildForm(new FormSettings(this));
         }
         #endregion
@@ -190,8 +192,8 @@ namespace WindowsFormsApp1
 
         public struct lightColors
         {
-            public static Color buttonSide = Color.FromArgb(230, 230, 230);
-            public static Color backGround = Color.FromArgb(230, 230, 250);
+            public static Color buttonSide = Color.FromArgb(79, 113, 198);//(230, 230, 230);
+            public static Color backGround = Color.FromArgb(211, 224, 235); //230, 230, 250
             public static Color buttonInside = Color.FromArgb(50, 119, 179); //150, 150, 150
             public static Color text = Color.FromArgb(0, 0, 0);
             public static Color element = Color.FromArgb(40, 40, 40);
@@ -224,12 +226,15 @@ namespace WindowsFormsApp1
 
         private void SideBtn_Dev_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender);
             openChildForm(new FormDev(this));
         }
 
         private void LogoPlaceholder_Click(object sender, EventArgs e)
         {
+            if(currentForm == null)
+                return;
+
             currentForm.Close();
             resetButton();
         }
@@ -257,7 +262,7 @@ namespace WindowsFormsApp1
                     component.BackColor = darkmode ? (component.Name.StartsWith("sideBtn")) ? darkColors.buttonSide : darkColors.buttonInside : 
                                                      (component.Name.StartsWith("sideBtn")) ? lightColors.buttonSide : lightColors.buttonInside;
 
-                    component.ForeColor =/* darkmode ? darkColors.text :*/ lightColors.text;
+                    component.ForeColor =/* darkmode ? */darkColors.text ;// : lightColors.text;
 
                 }
                 else if (component is TextBox)

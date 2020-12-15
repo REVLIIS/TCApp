@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
         {
             FormMain.darkmode = nightmode_checkbox.Checked;
             FormMain.themeHandler(this.Controls);
+            FormMain.themeHandler(FormMain.Controls);
         }
     }
 }

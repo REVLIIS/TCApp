@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
             FormMain = form;
             FormMain.themeHandler(this.Controls);
 
-            statisticsGrid.BackgroundColor = FormMain.darkmode ? Color.FromArgb(71, 71, 71) : Color.FromArgb(230, 230, 250);
+            statisticsGrid.BackgroundColor = FormMain.darkmode ? Color.FromArgb(71, 71, 71) : Color.FromArgb(211, 224, 235);
             statisticsGrid.EnableHeadersVisualStyles = false;
             statisticsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 

@@ -59,7 +59,7 @@
             // 
             // pageWrapper
             // 
-            this.pageWrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.pageWrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(224)))), ((int)(((byte)(235)))));
             this.pageWrapper.Controls.Add(this.label1);
             this.pageWrapper.Controls.Add(this.label_main);
             this.pageWrapper.Location = new System.Drawing.Point(200, 29);
@@ -91,7 +91,7 @@
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(45)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(224)))), ((int)(((byte)(235)))));
             this.panelSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelSideMenu.Controls.Add(this.Divider);
             this.panelSideMenu.Controls.Add(this.logoPlaceholder);
@@ -151,6 +151,7 @@
             // 
             // sideBtn_Menu
             // 
+            this.sideBtn_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(113)))), ((int)(((byte)(198)))));
             this.sideBtn_Menu.FlatAppearance.BorderSize = 0;
             this.sideBtn_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sideBtn_Menu.Font = new System.Drawing.Font("Vogue ExtraBold", 18F, System.Drawing.FontStyle.Bold);
@@ -166,11 +167,12 @@
             this.sideBtn_Menu.Text = "MENU";
             this.sideBtn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sideBtn_Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBtn_Menu.UseVisualStyleBackColor = true;
+            this.sideBtn_Menu.UseVisualStyleBackColor = false;
             this.sideBtn_Menu.Click += new System.EventHandler(this.sideBtn_Menu_Click);
             // 
             // sideBtn_Add
             // 
+            this.sideBtn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(113)))), ((int)(((byte)(198)))));
             this.sideBtn_Add.FlatAppearance.BorderSize = 0;
             this.sideBtn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sideBtn_Add.Font = new System.Drawing.Font("Vogue ExtraBold", 18F, System.Drawing.FontStyle.Bold);
@@ -186,11 +188,12 @@
             this.sideBtn_Add.Text = "ADD";
             this.sideBtn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sideBtn_Add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBtn_Add.UseVisualStyleBackColor = true;
+            this.sideBtn_Add.UseVisualStyleBackColor = false;
             this.sideBtn_Add.Click += new System.EventHandler(this.sideBtn_Add_Click);
             // 
             // sideBtn_Stats
             // 
+            this.sideBtn_Stats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(113)))), ((int)(((byte)(198)))));
             this.sideBtn_Stats.FlatAppearance.BorderSize = 0;
             this.sideBtn_Stats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sideBtn_Stats.Font = new System.Drawing.Font("Vogue ExtraBold", 18F, System.Drawing.FontStyle.Bold);
@@ -206,11 +209,12 @@
             this.sideBtn_Stats.Text = "STATS";
             this.sideBtn_Stats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sideBtn_Stats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBtn_Stats.UseVisualStyleBackColor = true;
+            this.sideBtn_Stats.UseVisualStyleBackColor = false;
             this.sideBtn_Stats.Click += new System.EventHandler(this.sideBtn_Stats_Click);
             // 
             // sideBtn_Settings
             // 
+            this.sideBtn_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(113)))), ((int)(((byte)(198)))));
             this.sideBtn_Settings.FlatAppearance.BorderSize = 0;
             this.sideBtn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sideBtn_Settings.Font = new System.Drawing.Font("Vogue ExtraBold", 18F, System.Drawing.FontStyle.Bold);
@@ -226,7 +230,7 @@
             this.sideBtn_Settings.Text = "SETTINGS";
             this.sideBtn_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sideBtn_Settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sideBtn_Settings.UseVisualStyleBackColor = true;
+            this.sideBtn_Settings.UseVisualStyleBackColor = false;
             this.sideBtn_Settings.Click += new System.EventHandler(this.sideBtn_Settings_Click);
             // 
             // dateLabel
@@ -255,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(224)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1053, 434);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.panelSideMenu);
