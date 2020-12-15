@@ -14,8 +14,6 @@ namespace WindowsFormsApp1
     {
         private CHALLENGE_APP FormMain;
 
-        public Boolean darkmode = false;
-
         public FormSettings(CHALLENGE_APP form)
         {
             InitializeComponent();

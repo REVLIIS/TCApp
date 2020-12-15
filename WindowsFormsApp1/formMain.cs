@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             //childForm.Dock = DockStyle.Fill;
-            childForm.Top = 2;
+            childForm.Top = 2; //make seperator visible top
             //childForm.BackColor = Color.Transparent; werkt niet
 
             pageWrapper.Controls.Add(childForm);
@@ -246,12 +246,10 @@ namespace WindowsFormsApp1
                 if(component.HasChildren)
                     themeHandler(component.Controls);
 
-                Console.WriteLine("yoo");
+                //als colorscheme af is verbeter deze rommel
 
                 if (component is Panel)
                 {
-                    devPrint("panel");
-
                     component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
                 }
                 else if (component is Button)
@@ -264,14 +262,10 @@ namespace WindowsFormsApp1
                 }
                 else if (component is TextBox)
                 {
-                    devPrint("txt");
-
                     component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
                 }
                 else if (component is Label)
                 {
-                    devPrint("lbl");
-
                     component.BackColor = darkmode ? darkColors.backGround : lightColors.backGround;
                     component.ForeColor = darkmode ? darkColors.text : lightColors.text;
                 }
