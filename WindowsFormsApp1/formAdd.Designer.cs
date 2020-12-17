@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_add_preset_dev = new System.Windows.Forms.Panel();
             this.addPreset_submit = new System.Windows.Forms.Button();
             this.addPreset_nameInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,28 +36,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelWrapper = new System.Windows.Forms.Panel();
-            this.panel_add_preset_dev.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addPreset_countDown)).BeginInit();
             this.panelWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel_add_preset_dev
-            // 
-            this.panel_add_preset_dev.Controls.Add(this.addPreset_submit);
-            this.panel_add_preset_dev.Controls.Add(this.addPreset_nameInput);
-            this.panel_add_preset_dev.Controls.Add(this.label3);
-            this.panel_add_preset_dev.Controls.Add(this.addPreset_countDown);
-            this.panel_add_preset_dev.Controls.Add(this.addPreset_MenuDropdown);
-            this.panel_add_preset_dev.Controls.Add(this.label1);
-            this.panel_add_preset_dev.Controls.Add(this.label2);
-            this.panel_add_preset_dev.Location = new System.Drawing.Point(25, 74);
-            this.panel_add_preset_dev.Name = "panel_add_preset_dev";
-            this.panel_add_preset_dev.Size = new System.Drawing.Size(302, 169);
-            this.panel_add_preset_dev.TabIndex = 12;
-            // 
             // addPreset_submit
             // 
-            this.addPreset_submit.Location = new System.Drawing.Point(85, 123);
+            this.addPreset_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPreset_submit.Location = new System.Drawing.Point(124, 128);
             this.addPreset_submit.Name = "addPreset_submit";
             this.addPreset_submit.Size = new System.Drawing.Size(122, 23);
             this.addPreset_submit.TabIndex = 2;
@@ -68,7 +53,7 @@
             // 
             // addPreset_nameInput
             // 
-            this.addPreset_nameInput.Location = new System.Drawing.Point(85, 40);
+            this.addPreset_nameInput.Location = new System.Drawing.Point(122, 47);
             this.addPreset_nameInput.Name = "addPreset_nameInput";
             this.addPreset_nameInput.Size = new System.Drawing.Size(120, 20);
             this.addPreset_nameInput.TabIndex = 3;
@@ -76,15 +61,15 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 96);
+            this.label3.Location = new System.Drawing.Point(81, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "menu";
+            this.label3.Text = "Menu";
             // 
             // addPreset_countDown
             // 
-            this.addPreset_countDown.Location = new System.Drawing.Point(85, 69);
+            this.addPreset_countDown.Location = new System.Drawing.Point(124, 74);
             this.addPreset_countDown.Name = "addPreset_countDown";
             this.addPreset_countDown.Size = new System.Drawing.Size(120, 20);
             this.addPreset_countDown.TabIndex = 5;
@@ -93,7 +78,7 @@
             // 
             this.addPreset_MenuDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.addPreset_MenuDropdown.FormattingEnabled = true;
-            this.addPreset_MenuDropdown.Location = new System.Drawing.Point(86, 96);
+            this.addPreset_MenuDropdown.Location = new System.Drawing.Point(125, 101);
             this.addPreset_MenuDropdown.Name = "addPreset_MenuDropdown";
             this.addPreset_MenuDropdown.Size = new System.Drawing.Size(121, 21);
             this.addPreset_MenuDropdown.TabIndex = 8;
@@ -101,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(50, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 6;
@@ -110,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 69);
+            this.label2.Location = new System.Drawing.Point(52, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 7;
@@ -120,7 +105,13 @@
             // 
             this.panelWrapper.BackColor = System.Drawing.SystemColors.Control;
             this.panelWrapper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelWrapper.Controls.Add(this.panel_add_preset_dev);
+            this.panelWrapper.Controls.Add(this.addPreset_submit);
+            this.panelWrapper.Controls.Add(this.addPreset_nameInput);
+            this.panelWrapper.Controls.Add(this.label1);
+            this.panelWrapper.Controls.Add(this.label3);
+            this.panelWrapper.Controls.Add(this.label2);
+            this.panelWrapper.Controls.Add(this.addPreset_countDown);
+            this.panelWrapper.Controls.Add(this.addPreset_MenuDropdown);
             this.panelWrapper.Location = new System.Drawing.Point(0, 0);
             this.panelWrapper.Name = "panelWrapper";
             this.panelWrapper.Size = new System.Drawing.Size(850, 400);
@@ -134,16 +125,14 @@
             this.Controls.Add(this.panelWrapper);
             this.Name = "FormAdd";
             this.Text = "formAdd";
-            this.panel_add_preset_dev.ResumeLayout(false);
-            this.panel_add_preset_dev.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addPreset_countDown)).EndInit();
             this.panelWrapper.ResumeLayout(false);
+            this.panelWrapper.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_add_preset_dev;
         private System.Windows.Forms.Button addPreset_submit;
         private System.Windows.Forms.TextBox addPreset_nameInput;
         private System.Windows.Forms.Label label3;

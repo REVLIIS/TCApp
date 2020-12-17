@@ -70,7 +70,7 @@
             this.statisticsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.statisticsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.statisticsGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.statisticsGrid.Location = new System.Drawing.Point(79, 91);
+            this.statisticsGrid.Location = new System.Drawing.Point(56, 91);
             this.statisticsGrid.Name = "statisticsGrid";
             this.statisticsGrid.ReadOnly = true;
             this.statisticsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -82,7 +82,7 @@
             // 
             this.statisticsDateLabel.AutoSize = true;
             this.statisticsDateLabel.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Bold);
-            this.statisticsDateLabel.Location = new System.Drawing.Point(73, 55);
+            this.statisticsDateLabel.Location = new System.Drawing.Point(50, 50);
             this.statisticsDateLabel.Name = "statisticsDateLabel";
             this.statisticsDateLabel.Size = new System.Drawing.Size(65, 33);
             this.statisticsDateLabel.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.statisticsCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.statisticsCalendar.ForeColor = System.Drawing.Color.Red;
-            this.statisticsCalendar.Location = new System.Drawing.Point(573, 91);
+            this.statisticsCalendar.Location = new System.Drawing.Point(474, 91);
             this.statisticsCalendar.MaxSelectionCount = 1;
             this.statisticsCalendar.Name = "statisticsCalendar";
             this.statisticsCalendar.TabIndex = 1;

@@ -21,7 +21,10 @@ namespace WindowsFormsApp1
             FormMain = form;
             FormMain.themeHandler(this.Controls);
 
+            nightmode_checkbox.CheckedChanged -= nightmode_checkbox_CheckedChanged;
             nightmode_checkbox.Checked = FormMain.darkmode; //save setting globally
+            nightmode_checkbox.CheckedChanged += nightmode_checkbox_CheckedChanged;
+
         }
 
         private void FormSettings_Load(object sender, EventArgs e)
@@ -34,6 +37,11 @@ namespace WindowsFormsApp1
             FormMain.darkmode = nightmode_checkbox.Checked;
             FormMain.themeHandler(this.Controls);
             FormMain.themeHandler(FormMain.Controls);
+        }
+
+        private void Settings_BrightnessSlider_ValueChanged(object sender, EventArgs e)
+        {
+            //change brightness..
         }
     }
 }

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         MySqlConnection databaseConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;database=challenge");
 
-        Boolean devmode = true;
+        Boolean devmode = false;
         private IconButton currentBtn;
         private Form currentForm;
         public bool darkmode = false;
@@ -130,8 +130,9 @@ namespace WindowsFormsApp1
             resetButton();
 
             currentBtn = (IconButton)senderBtn;
-            currentBtn.BackColor = darkmode ? Color.FromArgb(37, 36, 81) : Color.FromArgb(138, 164, 226);
+            currentBtn.BackColor = darkmode ? Color.FromArgb(95, 95, 95) : Color.FromArgb(138, 164, 226); //37, 36, 81
         }
+
 
         private void resetButton()
         {
@@ -147,26 +148,26 @@ namespace WindowsFormsApp1
         private void sideBtn_Menu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new FormMenu(this));
+            openChildForm(new FormMenu(this), (sender as Button).Text);
         }
 
 
         private void sideBtn_Add_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new FormAdd(this));
+            openChildForm(new FormAdd(this), (sender as Button).Text);
         }
 
         private void sideBtn_Stats_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new FormStatistics(this));
+            openChildForm(new FormStatistics(this), (sender as Button).Text);
         }
 
         private void sideBtn_Settings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new FormSettings(this));
+            openChildForm(new FormSettings(this), (sender as Button).Text);
         }
         #endregion
 
@@ -183,7 +184,7 @@ namespace WindowsFormsApp1
 
         public struct darkColors
         {
-            public static Color buttonSide = Color.FromArgb(71, 71, 71);
+            public static Color buttonSide = Color.FromArgb(40, 40, 40);
             public static Color backGround = Color.FromArgb(71, 71, 71);
             public static Color buttonInside = Color.FromArgb(193, 193, 193);
             public static Color text = Color.FromArgb(255, 255, 255);
@@ -200,7 +201,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void openChildForm(Form childForm)
+        private void openChildForm(Form childForm, string menuName)
         {
             devPrint("opening new form start");
 
@@ -208,6 +209,8 @@ namespace WindowsFormsApp1
                 currentForm.Close();
 
             currentForm = childForm;
+
+            main_menuName.Text = menuName;
 
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -227,16 +230,7 @@ namespace WindowsFormsApp1
         private void SideBtn_Dev_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new FormDev(this));
-        }
-
-        private void LogoPlaceholder_Click(object sender, EventArgs e)
-        {
-            if(currentForm == null)
-                return;
-
-            currentForm.Close();
-            resetButton();
+            openChildForm(new FormDev(this), (sender as Button).Text);
         }
 
         public void getColors()
@@ -261,8 +255,9 @@ namespace WindowsFormsApp1
                 {
                     component.BackColor = darkmode ? (component.Name.StartsWith("sideBtn")) ? darkColors.buttonSide : darkColors.buttonInside : 
                                                      (component.Name.StartsWith("sideBtn")) ? lightColors.buttonSide : lightColors.buttonInside;
+                    component.ForeColor = darkmode ? (component.Name.StartsWith("sideBtn")) ? darkColors.text : lightColors.text :
+                                                     (component.Name.StartsWith("sideBtn")) ? lightColors.text : darkColors.text;
 
-                    component.ForeColor =/* darkmode ? */darkColors.text ;// : lightColors.text;
 
                 }
                 else if (component is TextBox)
@@ -306,9 +301,21 @@ namespace WindowsFormsApp1
                 }
                 else
                     devPrint("elem not found "+component.GetType());
-
+                
             }
+
+            if (currentBtn != null)
+                ActivateButton(currentBtn);
         }
-        
+
+        private void Main_Logo_Click(object sender, EventArgs e)
+        {
+            if (currentForm == null)
+                return;
+
+            main_menuName.Text = "MAIN";
+            currentForm.Close();
+            resetButton();
+        }
     }
 }

@@ -45,8 +45,12 @@ namespace WindowsFormsApp1
                 FormMain.devPrint("adding buttons" + (int)dr["id"]);
 
                 Button button = new Button();
-                button.Width = 100;
-                button.Height = 75;
+                button.Width = 110;
+                button.Height = 60;
+                button.FlatStyle = FlatStyle.Flat;
+
+                button.MouseEnter += (s, e) => button.Cursor = Cursors.Hand;
+                button.MouseLeave += (s, e) => button.Cursor = Cursors.Arrow;
 
                 if ((int)dr["menu_id"] == 1) //items
                 {
@@ -54,6 +58,15 @@ namespace WindowsFormsApp1
                     button.Top = top_items;
 
                     left_items += button.Width + 10;
+
+                    if (left_items >= (panelMenuItem.Width - 10))
+                    {
+                        left_items = 10;
+                        top_items += button.Height + 10;
+
+                        button.Left = left_items;
+                        button.Top = top_items;
+                    }
 
                     panelMenuItem.Controls.Add(button);
 
@@ -64,6 +77,15 @@ namespace WindowsFormsApp1
                     button.Top = top_times;
 
                     left_times += button.Width + 10;
+
+                    if (left_times >= (panelMenuTimes.Width - 10))
+                    {
+                        left_times = 10;
+                        top_times += button.Height + 10;
+
+                        button.Left = left_times;
+                        button.Top = top_times;
+                    }
 
                     panelMenuTimes.Controls.Add(button);
 
@@ -80,10 +102,23 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void updateRecentPanel()
+        {
+            //panelMenuRecents.Controls.Clear();
+
+            var controlsToRemove = panelMenuRecents.Controls.OfType<Button>().ToArray();
+            foreach (var control in controlsToRemove)
+                panelMenuRecents.Controls.Remove(control);
+
+            fillRecentPanel();
+
+            FormMain.themeHandler(panelMenuRecents.Controls);
+        }
+    
         private void fillRecentPanel()
         {
-            int top = 0;
-            int limit = 5;
+            int top = labelRecents.Top + labelRecents.Height + 15;
+            int limit = 8;
             DataTable recents = FormMain.execQuery("call sp_getRecentStatistics("+limit+")");
 
             foreach (DataRow dr in recents.Rows)
@@ -92,8 +127,10 @@ namespace WindowsFormsApp1
                 DataRowCollection menu_item = menu_items.Rows;
 
                 Button button = new Button();
-                button.Width = panelMenuRecents.Width;
-                button.Height = panelMenuRecents.Height / limit;
+                button.MouseEnter += (s, e) => button.Cursor = Cursors.Hand;
+                button.MouseLeave += (s, e) => button.Cursor = Cursors.Arrow;
+                button.Width = panelMenuRecents.Width - 20;
+                button.Height = button.Width /2;//(panelMenuRecents.Height) / limit;
                 button.Top = top;
                 top += button.Height;
 
@@ -135,6 +172,8 @@ namespace WindowsFormsApp1
 
             if (completed)
                 insertStatistic(info[1]);
+
+            updateRecentPanel();
         }
 
         private void insertStatistic(string menu_item_id)

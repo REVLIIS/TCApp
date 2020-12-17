@@ -48,7 +48,7 @@
             // dev_LabelQuery
             // 
             this.dev_LabelQuery.AutoSize = true;
-            this.dev_LabelQuery.Location = new System.Drawing.Point(113, 38);
+            this.dev_LabelQuery.Location = new System.Drawing.Point(47, 25);
             this.dev_LabelQuery.Name = "dev_LabelQuery";
             this.dev_LabelQuery.Size = new System.Drawing.Size(33, 13);
             this.dev_LabelQuery.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             // dev_QuerySubmit
             // 
-            this.dev_QuerySubmit.Location = new System.Drawing.Point(32, 54);
+            this.dev_QuerySubmit.Location = new System.Drawing.Point(50, 50);
             this.dev_QuerySubmit.Name = "dev_QuerySubmit";
             this.dev_QuerySubmit.Size = new System.Drawing.Size(75, 23);
             this.dev_QuerySubmit.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // dev_QueryInput
             // 
-            this.dev_QueryInput.Location = new System.Drawing.Point(113, 57);
+            this.dev_QueryInput.Location = new System.Drawing.Point(131, 50);
             this.dev_QueryInput.Name = "dev_QueryInput";
             this.dev_QueryInput.Size = new System.Drawing.Size(193, 20);
             this.dev_QueryInput.TabIndex = 0;

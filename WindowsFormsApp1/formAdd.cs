@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            if (count_down < 0)
+            if (count_down <= 0)
             {
                 MessageBox.Show("Incorrect count_down");
                 return;
