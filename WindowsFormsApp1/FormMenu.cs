@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
         {
             string[] info = ((System.Windows.Forms.Button)sender).Name.Split(','); // [0]seconds [1]id
 
-            FormMain.devMsgBox(info[0] + " seconds clicked");
+            //FormMain.devMsgBox(info[0] + " seconds clicked");
 
             /*
                 (int) seconds doorsturen naar arduino 
@@ -202,15 +202,18 @@ namespace WindowsFormsApp1
 
         private void startProgressbar(int seconds)
         {
-            for (int i = 0; i <= seconds; i++)
+            seconds *= 1000;
+            int loops = 100;
+
+            for (int i = 0; i <= loops; i++)
             {
-                Thread.Sleep(10);
-                menu_Progressbar.Increment( (100/seconds) );
+                Thread.Sleep( (seconds/loops) );
+                menu_Progressbar.Increment( 1  );
             }
+            Thread.Sleep(100);
 
             MessageBox.Show("Done!");
             menu_Progressbar.Value = 0;
         }
-
     }
 }
