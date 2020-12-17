@@ -32,11 +32,15 @@
             this.dev_LabelQuery = new System.Windows.Forms.Label();
             this.dev_QuerySubmit = new System.Windows.Forms.Button();
             this.dev_QueryInput = new System.Windows.Forms.TextBox();
+            this.ard_ON = new System.Windows.Forms.Button();
+            this.ard_OFF = new System.Windows.Forms.Button();
             this.panelWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelWrapper
             // 
+            this.panelWrapper.Controls.Add(this.ard_OFF);
+            this.panelWrapper.Controls.Add(this.ard_ON);
             this.panelWrapper.Controls.Add(this.dev_LabelQuery);
             this.panelWrapper.Controls.Add(this.dev_QuerySubmit);
             this.panelWrapper.Controls.Add(this.dev_QueryInput);
@@ -71,6 +75,26 @@
             this.dev_QueryInput.Size = new System.Drawing.Size(193, 20);
             this.dev_QueryInput.TabIndex = 0;
             // 
+            // ard_ON
+            // 
+            this.ard_ON.Location = new System.Drawing.Point(50, 140);
+            this.ard_ON.Name = "ard_ON";
+            this.ard_ON.Size = new System.Drawing.Size(75, 23);
+            this.ard_ON.TabIndex = 3;
+            this.ard_ON.Text = "ON";
+            this.ard_ON.UseVisualStyleBackColor = true;
+            this.ard_ON.Click += new System.EventHandler(this.onButton_Click);
+            // 
+            // ard_OFF
+            // 
+            this.ard_OFF.Location = new System.Drawing.Point(178, 140);
+            this.ard_OFF.Name = "ard_OFF";
+            this.ard_OFF.Size = new System.Drawing.Size(75, 23);
+            this.ard_OFF.TabIndex = 4;
+            this.ard_OFF.Text = "OFF";
+            this.ard_OFF.UseVisualStyleBackColor = true;
+            this.ard_OFF.Click += new System.EventHandler(this.offButton_Click);
+            // 
             // FormDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,5 +115,7 @@
         private System.Windows.Forms.Label dev_LabelQuery;
         private System.Windows.Forms.Button dev_QuerySubmit;
         private System.Windows.Forms.TextBox dev_QueryInput;
+        private System.Windows.Forms.Button ard_OFF;
+        private System.Windows.Forms.Button ard_ON;
     }
 }

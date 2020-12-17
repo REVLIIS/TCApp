@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         MySqlConnection databaseConnection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;database=challenge");
 
-        Boolean devmode = false;
+        Boolean devmode = true;
         private IconButton currentBtn;
         private Form currentForm;
         public bool darkmode = false;

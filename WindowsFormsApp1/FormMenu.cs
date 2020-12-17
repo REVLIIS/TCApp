@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
     public partial class FormMenu : Form
     {
         CHALLENGE_APP FormMain;
+
+        static SerialPort _serialPort;
 
         public FormMenu(CHALLENGE_APP form)
         {
@@ -174,6 +178,9 @@ namespace WindowsFormsApp1
                 insertStatistic(info[1]);
 
             updateRecentPanel();
+
+            arduinoTurnOnLamp(info[0]);
+            startProgressbar(Int32.Parse(info[0]));
         }
 
         private void insertStatistic(string menu_item_id)
@@ -181,5 +188,29 @@ namespace WindowsFormsApp1
             FormMain.devPrint(menu_item_id);
             FormMain.execQuery("CALL sp_insertStatistic (" + menu_item_id + ")");
         }
+
+        private void arduinoTurnOnLamp(string seconds)
+        {
+            SerialPort sp = new SerialPort("COM5", 9600);
+
+            if (!sp.IsOpen)
+                sp.Open();
+
+            sp.Write(seconds);
+            sp.Close();
+        }
+
+        private void startProgressbar(int seconds)
+        {
+            for (int i = 0; i <= seconds; i++)
+            {
+                Thread.Sleep(10);
+                menu_Progressbar.Increment( (100/seconds) );
+            }
+
+            MessageBox.Show("Done!");
+            menu_Progressbar.Value = 0;
+        }
+
     }
 }

@@ -33,12 +33,13 @@
             this.panelWrapper = new System.Windows.Forms.Panel();
             this.menu_LabelItems = new System.Windows.Forms.Label();
             this.menu_LabelTimes = new System.Windows.Forms.Label();
-            this.labelRecents = new System.Windows.Forms.Label();
             this.panelMenuItem = new System.Windows.Forms.Panel();
             this.panelMenuTimes = new System.Windows.Forms.Panel();
             this.panelMenuRecents = new System.Windows.Forms.Panel();
-            this.menu_Tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.label_RecentsDiv = new System.Windows.Forms.Label();
+            this.labelRecents = new System.Windows.Forms.Label();
+            this.menu_Tooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.menu_Progressbar = new System.Windows.Forms.ProgressBar();
             this.panelWrapper.SuspendLayout();
             this.panelMenuRecents.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             this.panelWrapper.BackColor = System.Drawing.SystemColors.Control;
             this.panelWrapper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelWrapper.Controls.Add(this.menu_Progressbar);
             this.panelWrapper.Controls.Add(this.menu_LabelItems);
             this.panelWrapper.Controls.Add(this.menu_LabelTimes);
             this.panelWrapper.Controls.Add(this.panelMenuItem);
@@ -76,16 +78,6 @@
             this.menu_LabelTimes.Size = new System.Drawing.Size(74, 29);
             this.menu_LabelTimes.TabIndex = 17;
             this.menu_LabelTimes.Text = "TIMES";
-            // 
-            // labelRecents
-            // 
-            this.labelRecents.AutoSize = true;
-            this.labelRecents.Font = new System.Drawing.Font("Vogue", 18F, System.Drawing.FontStyle.Bold);
-            this.labelRecents.Location = new System.Drawing.Point(15, 9);
-            this.labelRecents.Name = "labelRecents";
-            this.labelRecents.Size = new System.Drawing.Size(104, 29);
-            this.labelRecents.TabIndex = 16;
-            this.labelRecents.Text = "Recents";
             // 
             // panelMenuItem
             // 
@@ -126,6 +118,23 @@
             this.label_RecentsDiv.TabIndex = 28;
             this.label_RecentsDiv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelRecents
+            // 
+            this.labelRecents.AutoSize = true;
+            this.labelRecents.Font = new System.Drawing.Font("Vogue", 18F, System.Drawing.FontStyle.Bold);
+            this.labelRecents.Location = new System.Drawing.Point(15, 9);
+            this.labelRecents.Name = "labelRecents";
+            this.labelRecents.Size = new System.Drawing.Size(104, 29);
+            this.labelRecents.TabIndex = 16;
+            this.labelRecents.Text = "Recents";
+            // 
+            // menu_Progressbar
+            // 
+            this.menu_Progressbar.Location = new System.Drawing.Point(174, 24);
+            this.menu_Progressbar.Name = "menu_Progressbar";
+            this.menu_Progressbar.Size = new System.Drawing.Size(469, 23);
+            this.menu_Progressbar.TabIndex = 19;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,5 +162,6 @@
         private System.Windows.Forms.ToolTip menu_Tooltip;
         private System.Windows.Forms.Label menu_LabelItems;
         private System.Windows.Forms.Label label_RecentsDiv;
+        private System.Windows.Forms.ProgressBar menu_Progressbar;
     }
 }
