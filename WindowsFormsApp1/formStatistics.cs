@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             statisticsGrid.EnableHeadersVisualStyles = false;
             statisticsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            populateStatsPanel( DateTime.Now.Date.ToShortDateString());
+            populateStatsPanel( DateTime.Now.Date.ToString("d-MM-yyyy"));
 
             statisticsDateLabel.Text = DateTime.Now.ToString("d MMMM, yyyy");
 
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
         {
             DateTime date = statisticsCalendar.SelectionRange.Start;
 
-            populateStatsPanel(date.ToShortDateString() );
+            populateStatsPanel(date.ToString("d-MM-yyyy"));
 
             statisticsDateLabel.Text = date.ToString("d MMMM, yyyy");
         }
