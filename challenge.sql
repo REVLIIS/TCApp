@@ -18,6 +18,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 --
 -- Database: `challenge`
 --
@@ -39,15 +44,6 @@ END$$
 DELIMITER ;
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `menu`
---
-
-CREATE TABLE `menu` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `menu`

@@ -211,5 +211,10 @@ namespace WindowsFormsApp1
             currentForm.Close();
             resetButton();
         }
+
+        private void pageWrapper_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
